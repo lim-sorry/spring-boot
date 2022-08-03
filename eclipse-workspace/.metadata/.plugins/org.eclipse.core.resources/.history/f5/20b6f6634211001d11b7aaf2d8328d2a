@@ -1,0 +1,8 @@
+package com.multicampus.biz.user;
+
+public class UserService {
+	
+	public UserService() {
+		System.out.println("===> UserService 생성");
+	}
+}

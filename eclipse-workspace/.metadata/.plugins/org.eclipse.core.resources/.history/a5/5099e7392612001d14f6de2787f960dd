@@ -1,0 +1,11 @@
+package com.rubypaper.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BoardServiceImpl {
+
+	public BoardServiceImpl() {
+		System.out.println("===> BoardServiceImpl 생성");
+	}
+}

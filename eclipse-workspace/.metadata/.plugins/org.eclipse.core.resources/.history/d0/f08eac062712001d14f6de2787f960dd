@@ -1,0 +1,12 @@
+package com.rubypaper.persistence;
+
+import org.springframework.stereotype.Repository;
+
+// 2. Repository 클래스
+@Repository
+public class BoardRepository {
+	
+	public BoardRepository() {
+		System.out.println("===> BoardRepository 생성");
+	}
+}

@@ -1,0 +1,21 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class TVUser {
+	public static void main(String[] args) {
+		// springContainer가 applicationXml(설정파일)을 로딩하도록 설정
+		//GenericXmlApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+		//AnnotationConfigApplicationContext container = new AnnotationConfigApplicationContext(TVConfiguration.class);
+		AnnotationConfigApplicationContext container = new AnnotationConfigApplicationContext("com.rubypaper.tv");
+		
+		// Dependency Lookup
+		TV tv = (TV) container.getBean("tv");
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+		
+		container.close();
+	}
+}

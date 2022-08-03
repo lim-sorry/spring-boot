@@ -1,0 +1,5 @@
+# 어플리케이션 설정
+spring.main.web-application-type=none
+
+# Bean Overwriting 설정
+spring.main.allow-bean-definition-overriding=true

@@ -1,0 +1,15 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.multicampus.biz.user.UserService;
+
+@Configuration
+public class TVConfiguration {
+
+//	@Bean
+//	UserService userService() {
+//		return new UserService();
+//	}
+}

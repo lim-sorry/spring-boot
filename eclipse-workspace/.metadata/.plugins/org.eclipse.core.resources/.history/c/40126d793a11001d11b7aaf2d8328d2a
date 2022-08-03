@@ -1,0 +1,17 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class TVUser {
+	public static void main(String[] args) {
+		// springContainer가 applicationXml(설정파일)을 로딩하도록 설정
+		GenericXmlApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+		
+		// Dependency Lookup
+		TV tv = (TV) container.getBean("tv");
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+	}
+}

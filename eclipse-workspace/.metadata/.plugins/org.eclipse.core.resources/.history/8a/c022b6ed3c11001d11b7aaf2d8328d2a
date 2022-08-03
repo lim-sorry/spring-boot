@@ -1,0 +1,18 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class TVUser {
+	private static AnnotationConfigApplicationContext container;
+
+	public static void main(String[] args) {
+		container = new AnnotationConfigApplicationContext(TVConfiguration.class);
+		
+		// Dependency Lookup
+		TV tv = (TV) container.getBean("tv");
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+	}
+}

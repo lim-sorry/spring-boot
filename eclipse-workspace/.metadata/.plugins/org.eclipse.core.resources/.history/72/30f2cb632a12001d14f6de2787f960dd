@@ -1,0 +1,6 @@
+# 테스트 케이스에서 사용할 프로퍼티 설정
+author.name=TESTER
+author.age=40
+
+# 서버 포트
+server.port=8080

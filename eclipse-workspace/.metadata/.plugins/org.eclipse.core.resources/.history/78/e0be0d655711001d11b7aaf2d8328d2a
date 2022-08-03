@@ -1,0 +1,7 @@
+package com.multicampus;
+
+public class UserController {
+	public UserController() {
+		System.out.println("===> UserController 생성");
+	}
+}

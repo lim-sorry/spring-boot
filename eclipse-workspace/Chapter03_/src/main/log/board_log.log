@@ -1,0 +1,22 @@
+2022:08:03 09:21:26 INFO  --- [restartedMain] com.rubypaper.Chapter03Application : Starting Chapter03Application using Java 17.0.3 on M303INS with PID 5796 (C:\DEV\eclipse-workspace\Chapter03\target\classes started by student in C:\DEV\eclipse-workspace\Chapter03) 
+2022:08:03 09:21:26 INFO  --- [restartedMain] com.rubypaper.Chapter03Application : No active profile set, falling back to 1 default profile: "default" 
+2022:08:03 09:21:26 INFO  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2022:08:03 09:21:26 INFO  --- [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2022:08:03 09:21:26 INFO  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting... 
+2022:08:03 09:21:26 INFO  --- [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed. 
+2022:08:03 09:21:26 INFO  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729 
+2022:08:03 09:21:26 INFO  --- [restartedMain] com.rubypaper.Chapter03Application : Started Chapter03Application in 0.808 seconds (JVM running for 1.252) 
+2022:08:03 09:21:26 INFO  --- [restartedMain] c.rubypaper.service.LoggingService : INFO 레벨의 로그 
+2022:08:03 09:21:26 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 09:21:26 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 
+2022:08:03 09:21:27 WARN  --- [SpringApplicationShutdownHook] o.s.b.f.s.DisposableBeanAdapter : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214] 
+2022:08:03 09:21:27 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated... 
+2022:08:03 09:21:27 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed. 
+2022:08:03 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 
+2022:08:03 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 
+2022:08:03 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 
+2022:08:03 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 

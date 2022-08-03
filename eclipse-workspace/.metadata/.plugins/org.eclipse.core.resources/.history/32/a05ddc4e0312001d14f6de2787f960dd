@@ -1,0 +1,22 @@
+package com.rubypaper;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+
+//@SpringBootApplication
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan
+public class Chapter02Application {
+	
+	//WebMvcAutoConfiguration
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Chapter02Application.class, args);
+	}
+
+}

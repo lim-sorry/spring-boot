@@ -1,0 +1,11 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.Bean;
+
+public class TVConfiguration {
+
+	@Bean("lgTV")
+	TV tv() {
+		return new LgTV();
+	}
+}

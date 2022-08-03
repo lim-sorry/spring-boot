@@ -1,0 +1,2 @@
+2022:08:03 WARN  --- [restartedMain] c.rubypaper.service.LoggingService : WARN 레벨의 로그 
+2022:08:03 ERROR --- [restartedMain] c.rubypaper.service.LoggingService : ERROR 레벨의 로그 

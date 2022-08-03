@@ -1,0 +1,11 @@
+package com.rubypaper.tv;
+
+public class TVUser {
+	public static void main(String[] args) {
+		SamsungTV tv = new SamsungTV();
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+	} // 잘못작성된 프로그램, 유지보수가 어려움
+}

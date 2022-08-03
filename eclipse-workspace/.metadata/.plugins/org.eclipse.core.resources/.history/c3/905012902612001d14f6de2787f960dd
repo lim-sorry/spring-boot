@@ -1,0 +1,31 @@
+package com.rubypaper.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.rubypaper.domain.Board;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+
+	public BoardServiceImpl() {
+		System.out.println("===> BoardServiceImpl 생성");
+	}
+
+	@Override
+	public String hello(String name) {
+		return "hello : " + name;
+	}
+
+	@Override
+	public Board getBoard(int seq) {
+		return new Board();
+	}
+
+	@Override
+	public List<Board> getBoardList() {
+		return new ArrayList<Board>();
+	}
+}

@@ -1,0 +1,57 @@
+package com.rubypaper;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.rubypaper.domain.Board;
+import com.rubypaper.service.BoardService;
+
+@SpringBootTest
+@AutoConfigureMockMvc // 서블릿 컨테이너가 모킹된다.
+public class BoardServiceTest {
+
+	@Autowired // 서블릿 컨테이너를 목업한다.
+	private MockMvc mockMvc;
+	
+	@MockBean // BoardService 타입의 구현 객체를 모킹&목업해라.
+	private BoardService boardService;
+	
+	@Test
+	public void testHello() throws Exception {
+		// when() : 목업된 비즈니스 객체의 메소드를 호출했을 때
+		// thenReturn() : 어떤 값이 리턴될지 미리 설정한다.
+		when(boardService.hello("gurum")).thenReturn("hello : gurum");
+		
+		mockMvc.perform(get("/hello").param("name", "gurum"))
+		.andExpect(status().is(200))
+		.andExpect(content().string("hello : gurum"));
+	}
+	
+	@Test
+	public void testGetBoard() throws Exception {
+		Board board = new Board();
+		board.setSeq(100);
+		board.setTitle("No Title");
+		board.setWriter("No Writer");
+		board.setContent("No Content");
+		board.setRegDate(new Date());
+		board.setCnt(0);
+		when(boardService.getBoard(100)).thenReturn(board);
+		
+		mockMvc.perform(get("/getBoard/100"))
+		.andExpect(status().is(200))
+		.andExpect(jsonPath("$.writer").value("No Writer"));
+	}
+}

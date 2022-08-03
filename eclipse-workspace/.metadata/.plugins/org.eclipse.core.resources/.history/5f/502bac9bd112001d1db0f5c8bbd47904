@@ -1,0 +1,24 @@
+package com.rubypaper.domain;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.Data;
+
+// 1. Entity 클래스
+@Entity // JPA는 @Entity가 설정된 객체만 관리한다.(필수)
+@Data
+public class Board {
+	
+	@Id // @Id : 식별자 변수(PK와 매핑된 변수)에 설정해야 한다.(필수)
+	@GeneratedValue // @GeneratedValue : 1부터 1씩 자동으로 증가시키는 기능을 제공한다.
+	private int seq;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regDate = new Date();
+	private int cnt = 0;
+}

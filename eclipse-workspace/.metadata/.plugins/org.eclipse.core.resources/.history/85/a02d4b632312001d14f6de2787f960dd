@@ -1,0 +1,26 @@
+package com.rubypaper;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.web.servlet.MockMvc;
+
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class BoardControllerTestWithTomcat {
+
+	@Autowired
+	// TestRestTemplate은 REST API를 테스트하기 위한 가상의 브라우저 객체이다.
+	private TestRestTemplate restTemplate;
+	
+	@Test
+	public void testHello() throws Exception {
+		String result = restTemplate.getForObject("/hello?name=gurum", String.class);
+		System.out.println(result);
+	}
+}

@@ -1,0 +1,26 @@
+package com.rubypaper;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+
+@SpringBootTest
+@AutoConfigureMockMvc // 서블릿 컨테이너가 모킹된다.
+public class BoardServiceTest {
+
+	@Autowired // 서블릿 컨테이너를 목업한다.
+	private MockMvc mockMvc;
+	
+	@Test
+	public void testHello() throws Exception {
+		mockMvc.perform(get("/hello").param("name", "gurum"))
+		.andExpect(status().is(200))
+		.andExpect(content().string("hello : gurum"));
+	}
+}

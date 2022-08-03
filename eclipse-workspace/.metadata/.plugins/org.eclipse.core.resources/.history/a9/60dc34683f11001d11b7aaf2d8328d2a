@@ -1,0 +1,16 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.Bean;
+
+public class TVConfiguration {
+
+	@Bean
+	TV tv() {
+		return new LgTV();
+	}
+	
+	@Bean
+	Speaker speaker() {
+		return new SonySpeaker();
+	}
+}

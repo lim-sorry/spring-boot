@@ -1,0 +1,9 @@
+package com.rubypaper.jdbc.config;
+
+public class JDBCConnectionManagerProperties {
+	private String driverClass;
+	private String url;
+	private String username;
+	private String password;
+	
+}

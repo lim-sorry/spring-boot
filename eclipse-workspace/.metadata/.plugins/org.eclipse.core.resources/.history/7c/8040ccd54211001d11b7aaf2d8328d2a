@@ -1,0 +1,17 @@
+package com.rubypaper.tv;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.multicampus.biz.user.UserService;
+
+//@Configuration
+@ComponentScan(basePackages = {"com.multicampus",})
+public class TVConfiguration {
+
+//	@Bean
+//	UserService userService() {
+//		return new UserService();
+//	}
+}
